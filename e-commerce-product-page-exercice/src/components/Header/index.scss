@@ -1,0 +1,62 @@
+.header {
+  height: 70px;
+  padding: 0 $spacing-m;
+  @include flex(row, space-between, center);
+  &-left {
+    &--logo {
+      margin-left: $spacing-m;
+    }
+  }
+  &-right {
+    &--profileImage {
+      width: 25px;
+      margin-left: $spacing-m;
+    }
+  }
+  &-menu {
+    padding: $spacing-m;
+    background-color: $light-grayish-blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    transform: translateX(-110%);
+    transition: 0.5s ease-in-out;
+    div {
+      margin-top: $spacing-l;
+      gap: $spacing-m;
+      @include flex(column, center, left);
+      a {
+        font-size: 20px;
+        font-weight: bold;
+        color: $dark-blue;
+      }
+    }
+  }
+  &-menu--open {
+    transform: translateX(0);
+  }
+  button {
+    cursor: pointer;
+    @include button-reset;
+  }
+
+  @media screen and (min-width: $desktop) {
+    &-left {
+      width: 50%;
+      @include flex(row-reverse, space-between);
+      &--logo {
+        margin-left: 0;
+      }
+      div {
+        width: 100%;
+        margin-left: $spacing-xl;
+        @include flex(row, space-between);
+      }
+    }
+    &-menu {
+      display: none;
+    }
+  }
+}

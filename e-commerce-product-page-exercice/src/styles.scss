@@ -8,3 +8,19 @@
 
 // components
 @import './components/Header';
+
+// some default styles
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+p,
+a {
+  font-size: 16px;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: $dark-grayish-blue;
+}

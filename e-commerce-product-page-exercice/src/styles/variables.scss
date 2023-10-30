@@ -1,0 +1,21 @@
+// spacings
+$spacing-xxs: 0.25rem;
+$spacing-xs: 0.5rem;
+$spacing-s: 1rem;
+$spacing-m: 1.5rem;
+$spacing-l: 2rem;
+$spacing-xl: 3rem;
+
+// media queries
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1224px;
+
+// colors
+$color-primary: hsl(26, 100%, 55%);
+$color-primary-light: hsl(25, 100%, 94%);
+
+$dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
