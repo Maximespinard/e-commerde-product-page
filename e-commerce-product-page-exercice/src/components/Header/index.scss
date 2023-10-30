@@ -33,9 +33,9 @@
         color: $dark-blue;
       }
     }
-  }
-  &-menu--open {
-    transform: translateX(0);
+    &--open {
+      transform: translateX(0);
+    }
   }
   button {
     cursor: pointer;
@@ -43,20 +43,40 @@
   }
 
   @media screen and (min-width: $desktop) {
+    padding-bottom: $spacing-l;
+    padding-top: $spacing-s;
+    border-bottom: 1px solid $grayish-blue;
     &-left {
       width: 50%;
       @include flex(row-reverse, space-between);
-      &--logo {
-        margin-left: 0;
-      }
       div {
         width: 100%;
         margin-left: $spacing-xl;
         @include flex(row, space-between);
+        a {
+          position: relative;
+          text-decoration: none;
+        }
+        a:after {
+          content: '';
+          position: absolute;
+          background-color: $color-primary;
+          height: 3px;
+          width: 0;
+          left: 0;
+          top: 74px !important;
+          transition: 0.3s;
+        }
+        a:hover {
+          font-weight: bold;
+        }
+        a:hover:after {
+          width: 100%;
+        }
       }
-    }
-    &-menu {
-      display: none;
+      &--logo {
+        margin-left: 0;
+      }
     }
   }
 }

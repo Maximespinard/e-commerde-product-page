@@ -24,3 +24,9 @@ a {
   text-decoration: none;
   color: $dark-grayish-blue;
 }
+
+@media screen and (min-width: $desktop) {
+  body {
+    padding: 0 10%;
+  }
+}
